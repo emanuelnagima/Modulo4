@@ -1,0 +1,91 @@
+/* Estilo base para o body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgb(199, 8, 189), #09090a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o container do formulário */
+.form-container {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título do formulário */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4e54c8;
+}
+
+/* Estilo das labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo dos campos de input */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    border-color: #4e54c8;
+}
+
+/* Estilo do botão de cadastro */
+button.cadastrar {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgb(199, 8, 189);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+button.cadastrar:hover {
+    background-color: rgb(199, 8, 189);
+}
+
+/* Estilo do parágrafo com link */
+p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+}
+
+p a {
+    color: rgb(199, 8, 189);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

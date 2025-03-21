@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+header {
+    background-image: linear-gradient(
+    90deg,
+    rgb(199, 8, 189),
+    rgb(139, 46, 119)  
+);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+
+nav {
+    background-image: linear-gradient(
+90deg,
+rgb(199, 8, 189),
+rgb(139, 46, 119) 
+);
+    padding: 10px;
+    text-align: center;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 18px;
+    
+}
+
+nav a:hover {
+
+    gap: 10px;
+    color: rgb(5, 5, 5);
+}
+
+.banner {
+    background: url('https://source.unsplash.com/1600x600/?travel') no-repeat center/cover;
+    height: 150px;
+    display: block;
+   margin-top: 2%;
+   margin-bottom: 3%;
+    text-align: center;
+    color: rgb(19, 18, 18);
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.destinos {
+    padding: 20px;
+    text-align: center;
+}
+
+.destinos h2 {
+    margin-bottom: 20px;
+}
+
+.destinos .grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.destinos .grid div {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    
+}
+
+.destinos img {
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+footer {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 90px;
+    margin-top: 20px;
+}
+
+button {
+background: rgba(199, 8, 189, 0.836);
+color: white;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+background: rgba(255, 251, 255, 0.836);
+
+}
+

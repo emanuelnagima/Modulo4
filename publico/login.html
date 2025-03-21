@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        .login-container { width: 300px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input { width: 100%; padding: 8px; margin: 5px 0; }
+        button { width: 100%; padding: 8px; background-color: blue; color: white; border: none; cursor: pointer; }
+        .error { color: red; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Evita que a página recarregue
+
+            let username = document.getElementById("usuario").value;
+            let password = document.getElementById("senha").value;
+            let errorMessage = document.getElementById("errorMessage");
+
+            try {
+                const response = await fetch("http://localhost:4200/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: `usuario=${username}&senha=${password}`
+                });
+
+                if (response.redirected) {
+                    window.location.href = response.url; // Redireciona para index.html se login for bem-sucedido
+                } else {
+                    errorMessage.textContent = "Usuário ou senha incorretos.";
+                }
+            } catch (error) {
+                errorMessage.textContent = "Erro ao conectar ao servidor.";
+            }
+        });
+    </script>
+
+</body>
+</html>
