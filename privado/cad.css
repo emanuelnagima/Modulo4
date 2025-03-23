@@ -1,91 +1,92 @@
-/* Estilo base para o body */
+/* Estilo geral */
 body {
-    margin: 0;
+    background-color:rgb(199, 8, 189);
+    font-family: Arial, sans-serif; 
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, rgb(199, 8, 189), #09090a);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Estilo para o container do formulário */
+
 .form-container {
-    background-color: #fff;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-}
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px; 
+    margin: 20px auto;
+    max-width: 400px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    color: black; 
 
-/* Título do formulário */
-.form-container h2 {
+}
+h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #4e54c8;
+    color: #6a0dad; 
 }
 
-/* Estilo das labels */
+
 label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin: 10px 0 5px;
     font-weight: bold;
-    color: #333;
 }
 
-/* Estilo dos campos de input */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"] {
+input {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
+    padding: 8px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s;
+    border-radius: 4px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="password"]:focus {
-    border-color: #4e54c8;
-}
 
-/* Estilo do botão de cadastro */
-button.cadastrar {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: rgb(199, 8, 189);
-    color: #fff;
+button {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
+    background-color:rgb(199, 8, 189); 
+    color: white; 
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1rem;
 }
 
-button.cadastrar:hover {
-    background-color: rgb(199, 8, 189);
+button:hover {
+    background-color: rgb(199, 8, 189); 
 }
 
-/* Estilo do parágrafo com link */
-p {
-    text-align: center;
-    margin-top: 1rem;
-    color: #555;
-}
 
-p a {
-    color: rgb(199, 8, 189);
+a {
+    color: #6a0dad;
     text-decoration: none;
-    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
 
-p a:hover {
+a:hover {
     text-decoration: underline;
+}
+
+/* Espaço para tabela de usuários */
+#espacoTabela {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white; /* Fundo branco */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    color: black;
+}
+
+table {
+    width: 100%; /* Tabela ocupa todo o espaço */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd; /* Bordas leves */
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(199, 8, 189);
 }

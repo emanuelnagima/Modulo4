@@ -1,14 +1,14 @@
 import UsuarioDB from "../database/usuarioDB.js";
 
 export default class Usuario {
-    #email;
     #nome;
+    #email;
     #senha;
     #telefone;
     
-    constructor(email, nome, senha, telefone) {
-        this.#email = email;
+    constructor(nome, email, senha, telefone) {
         this.#nome = nome;
+        this.#email = email;
         this.#senha = senha;
         this.#telefone = telefone;
     }
@@ -31,12 +31,13 @@ export default class Usuario {
     }
 
     // Setters
-    set email(novoEmail) {
-        this.#email = novoEmail;
-    }
-
+    
     set nome(novoNome) {
         this.#nome = novoNome;
+    }
+
+    set email(novoEmail) {
+        this.#email = novoEmail;
     }
 
   
@@ -51,8 +52,8 @@ export default class Usuario {
     // Método para converter o objeto em JSON
     toJSON() {
         return {         
-            email: this.#email,
             nome: this.#nome,
+            email: this.#email,
             senha: this.#senha,
             telefone: this.#telefone
         };

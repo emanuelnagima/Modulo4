@@ -4,6 +4,7 @@ import rotaUsuario from "./controller/routes/rotaUsuario.js";
 import session from "express-session";
 import autenticar from "./seguranca/autenticar.js";
 
+
 const host = "0.0.0.0"; //     Disponível em qualquer interface
 const porta = 4200;
 

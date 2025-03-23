@@ -55,12 +55,12 @@ nav a:hover {
 .banner {
     background: url('https://source.unsplash.com/1600x600/?travel') no-repeat center/cover;
     height: 150px;
-    display: block;
+        display: block;
    margin-top: 2%;
    margin-bottom: 3%;
-    text-align: center;
+        text-align: center;
     color: rgb(19, 18, 18);
-    font-size: 20px;
+                font-size: 20px;
     font-weight: bold;
     
 }
@@ -76,8 +76,8 @@ nav a:hover {
 
 .destinos .grid {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+     gap: 20px;
+     justify-content: center;
     flex-wrap: wrap;
     
 }
@@ -85,33 +85,33 @@ nav a:hover {
 .destinos .grid div {
     background: white;
     padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     width: 300px;
     text-align: center;
     
 }
 
 .destinos img {
     width: 100%;
-    border-radius: 5px;
+     border-radius: 5px;
     
 }
 
 footer {
     background: #ffffff;
     color: rgb(0, 0, 0);
-    text-align: center;
+     text-align: center;
     padding: 90px;
-    margin-top: 20px;
+        margin-top: 20px;
 }
 
 button {
 background: rgba(199, 8, 189, 0.836);
 color: white;
-padding: 10px;
-border: none;
-border-radius: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 cursor: pointer;
 transition: 0.2s;
 }

@@ -11,14 +11,14 @@ export default class UsuarioCtrl {
     gravar(requisicao, resposta) {
         if (requisicao.method === 'POST' && requisicao.is("application/json")) {
             const dados = requisicao.body;
-            const { email, nome, senha, telefone } = dados;
+            const { nome, email, senha, telefone } = dados;
 
-            if (email && nome && senha && telefone) {
-                const usuario = new Usuario(email, nome, senha, telefone);
+            if (nome && email && senha && telefone) {
+                const usuario = new Usuario(nome, email, senha, telefone);
                 usuario.gravar().then(() => {
                     resposta.status(201).json({
                         status: true,
-                        mensagem: "Usuario gravado com sucesso!"
+                        mensagem: "Usuário gravado com sucesso!"
                     });
                 }).catch((erro) => {
                     resposta.status(500).json({
@@ -44,19 +44,19 @@ export default class UsuarioCtrl {
     alterar(requisicao, resposta) {
         if ((requisicao.method === 'PUT' || requisicao.method === 'PATCH') && requisicao.is("application/json")) {
             const dados = requisicao.body;
-            const { email, nome, senha, telefone } = dados;
+            const { nome, email, senha, telefone } = dados;
 
-            if (email && nome && senha && telefone) {
-                const usuario = new Usuario(email, nome, senha, telefone);
+            if (nome && email && senha && telefone) {
+                const usuario = new Usuario(nome, email, senha, telefone);
                 usuario.alterar().then(() => {
                     resposta.status(200).json({
                         status: true,
-                        mensagem: "Usuario alterado com sucesso!"
+                        mensagem: "Usuário alterado com sucesso!"
                     });
                 }).catch((erro) => {
                     resposta.status(500).json({
                         status: false,
-                        mensagem: "Erro ao alterar usuario: " + erro
+                        mensagem: "Erro ao alterar usuário: " + erro
                     });
                 });
             } else {
@@ -128,4 +128,4 @@ export default class UsuarioCtrl {
             });
         }
     }
-} 
+}
